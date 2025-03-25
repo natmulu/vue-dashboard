@@ -6,6 +6,16 @@ const router = createRouter({
     return savedPosition || { left: 0, top: 0 }
   },
   routes: [
+    // CRIMINAL 
+    {
+      path: '/towns',
+      name: 'towns',
+      component: () => import('../views/Criminal/Town.vue'),
+      meta: {
+        title: 'Towns',
+      },
+    },  
+
     {
       path: '/',
       name: 'Ecommerce',

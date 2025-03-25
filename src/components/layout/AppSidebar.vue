@@ -256,8 +256,8 @@ const menuGroups = [
       },
       {
         icon: CalenderIcon,
-        name: "Calendar",
-        path: "/calendar",
+        name: "Town",
+        path: "/towns",
       },
       {
         icon: UserCircleIcon,
@@ -270,19 +270,6 @@ const menuGroups = [
         icon: ListIcon,
         subItems: [
           { name: "Form Elements", path: "/form-elements", pro: false },
-        ],
-      },
-      {
-        name: "Tables",
-        icon: TableIcon,
-        subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-      },
-      {
-        name: "Pages",
-        icon: PageIcon,
-        subItems: [
-          { name: "Black Page", path: "/blank", pro: false },
-          { name: "404 Page", path: "/error-404", pro: false },
         ],
       },
     ],
