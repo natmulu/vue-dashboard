@@ -232,9 +232,7 @@ export default {
     FullScreenLayout,
   },
   mounted() {
-    if(localStorage.getItem('token')) {
-      this.applyHeader(localStorage.getItem('token'))
-    }
+    this.$store.dispatch('applyHeader')
   }
 }
 

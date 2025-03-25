@@ -11,6 +11,7 @@ import App from './App.vue'
 import router from './router'
 import VueApexCharts from 'vue3-apexcharts'
 import { createStore } from 'vuex'
+import axios from 'axios'
 
 const app = createApp(App)
 
@@ -26,6 +27,13 @@ const store = createStore({
     },
     mutations: {
       
+    },
+    actions: {
+      applyHeader() {
+        if(localStorage.getItem('token')) {
+          axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
+          axios.defaults.withCredentials = true        }
+      }
     }
 })
 
