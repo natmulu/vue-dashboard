@@ -16,6 +16,8 @@ const router = createRouter({
       },
     },   
 
+
+   
     {
       path: '/cities',
       name: 'cities',
@@ -170,6 +172,16 @@ const router = createRouter({
         title: 'Signup',
       },
     },
+    //prisioner
+    {
+      path: '/Prisioner',
+      name: 'Prisioner',
+      component: () => import('../views/Prisioner/Prisioner.vue'),
+      meta: {
+        title: 'Prisioner',
+      },
+    },
+    
   ],
 })
 

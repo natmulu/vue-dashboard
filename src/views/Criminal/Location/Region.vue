@@ -57,7 +57,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr v-for="region in regions" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+								<tr v-for="region in regions" :key="region.id" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
 									<th scope="row"
 										class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
 										{{ region.name }}
