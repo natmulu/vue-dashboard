@@ -213,7 +213,6 @@
           </div>
         </div>
       </nav>
-      <SidebarWidget v-if="isExpanded || isHovered || isMobileOpen" />
     </div>
   </aside>
 </template>
@@ -249,15 +248,28 @@ const menuGroups = [
   {
     title: "Menu",
     items: [
+      
       {
         icon: GridIcon,
         name: "Dashboard",
-        subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+        path: "/",
       },
       {
-        icon: CalenderIcon,
-        name: "Town",
-        path: "/towns",
+        name: "Locations",
+        icon: ListIcon,
+        subItems: [
+          { name: "Region", path: "/regions", pro: false },
+          { name: "City", path: "/cities", pro: false },
+          { name: "Town", path: "/towns", pro: false },
+        ],
+      },
+      {
+        name: "System",
+        icon: ListIcon,
+        subItems: [
+          { name: "Religion", path: "/religions", pro: false },
+          { name: "Disease Type", path: "/disease-types", pro: false },
+        ],
       },
       {
         icon: UserCircleIcon,
@@ -277,14 +289,14 @@ const menuGroups = [
   {
     title: "Others",
     items: [
-      {
-        icon: PieChartIcon,
-        name: "Charts",
-        subItems: [
-          { name: "Line Chart", path: "/line-chart", pro: false },
-          { name: "Bar Chart", path: "/bar-chart", pro: false },
-        ],
-      },
+      // {
+      //   icon: PieChartIcon,
+      //   name: "Charts",
+      //   subItems: [
+      //     { name: "Line Chart", path: "/line-chart", pro: false },
+      //     { name: "Bar Chart", path: "/bar-chart", pro: false },
+      //   ],
+      // },
       {
         icon: BoxCubeIcon,
         name: "Ui Elements",
@@ -297,14 +309,14 @@ const menuGroups = [
           { name: "Videos", path: "/videos", pro: false },
         ],
       },
-      {
-        icon: PlugInIcon,
-        name: "Authentication",
-        subItems: [
-          { name: "Signin", path: "/signin", pro: false },
-          { name: "Signup", path: "/signup", pro: false },
-        ],
-      },
+      // {
+      //   icon: PlugInIcon,
+      //   name: "Authentication",
+      //   subItems: [
+      //     { name: "Signin", path: "/signin", pro: false },
+      //     { name: "Signup", path: "/signup", pro: false },
+      //   ],
+      // },
       // ... Add other menu items here
     ],
   },

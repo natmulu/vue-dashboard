@@ -6,30 +6,58 @@ const router = createRouter({
     return savedPosition || { left: 0, top: 0 }
   },
   routes: [
-    // CRIMINAL 
+    // CRIMINAL
+    {
+      path: '/regions',
+      name: 'regions',
+      component: () => import('../views/Criminal/Location/Region.vue'),
+      meta: {
+        title: 'Regions',
+      },
+    },   
+
+    {
+      path: '/cities',
+      name: 'cities',
+      component: () => import('../views/Criminal/Location/City.vue'),
+      meta: {
+        title: 'Cities',
+      },
+    },  
+
     {
       path: '/towns',
       name: 'towns',
-      component: () => import('../views/Criminal/Town.vue'),
+      component: () => import('../views/Criminal/Location/Town.vue'),
       meta: {
         title: 'Towns',
       },
     },  
 
     {
-      path: '/',
-      name: 'Ecommerce',
-      component: () => import('../views/Ecommerce.vue'),
+      path: '/religions',
+      name: 'religions',
+      component: () => import('../views/Criminal/Religion.vue'),
       meta: {
-        title: 'eCommerce Dashboard',
+        title: 'Religion',
       },
-    },
+    },  
+
     {
-      path: '/calendar',
-      name: 'Calendar',
-      component: () => import('../views/Others/Calendar.vue'),
+      path: '/disease-types',
+      name: 'disease-types',
+      component: () => import('../views/Criminal/DiseaseType.vue'),
       meta: {
-        title: 'Calendar',
+        title: 'Disease Type',
+      },
+    },  
+
+    {
+      path: '/',
+      name: 'Dashboard',
+      component: () => import('../views/Dashboard.vue'),
+      meta: {
+        title: 'Dashboard',
       },
     },
     {
@@ -46,14 +74,6 @@ const router = createRouter({
       component: () => import('../views/Forms/FormElements.vue'),
       meta: {
         title: 'Form Elements',
-      },
-    },
-    {
-      path: '/basic-tables',
-      name: 'Basic Tables',
-      component: () => import('../views/Tables/BasicTables.vue'),
-      meta: {
-        title: 'Basic Tables',
       },
     },
     {
