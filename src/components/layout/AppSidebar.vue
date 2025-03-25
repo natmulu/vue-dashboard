@@ -15,18 +15,20 @@
   >
     <div
       :class="[
-        'py-8 flex',
+        'py-4 flex',
         !isExpanded && !isHovered ? 'lg:justify-center' : 'justify-start',
       ]"
     >
       <router-link to="/">
+        <div class="flex">
+
         <img
           v-if="isExpanded || isHovered || isMobileOpen"
           class="dark:hidden"
-          src="/images/logo/logo.svg"
+          src="../../assets/criminallogo.png"
           alt="Logo"
-          width="150"
-          height="40"
+          width="60"
+          height="20"
         />
         <img
           v-if="isExpanded || isHovered || isMobileOpen"
@@ -43,6 +45,11 @@
           width="32"
           height="32"
         />
+        <span class="mt-5">
+          ኮምቦልቻ ማረሚያ ቤት
+        </span>
+      </div>
+
       </router-link>
     </div>
     <div
